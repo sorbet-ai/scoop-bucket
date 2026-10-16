@@ -1,0 +1,25 @@
+{
+    "version": "0.1.2",
+    "description": "Terminal monitor for GPUs, the processes using them and the machine around them",
+    "homepage": "https://github.com/sorbet-ai/omnimon",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sorbet-ai/omnimon/releases/download/v0.1.2/omnimon-x86_64-pc-windows-msvc.exe#/omnimon.exe",
+            "hash": "368b18ff1450cf92701bce354fecbe932f0fd4d90ef9ac29eef0565e831108c4"
+        }
+    },
+    "bin": "omnimon.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sorbet-ai/omnimon/releases/download/v$version/omnimon-x86_64-pc-windows-msvc.exe#/omnimon.exe"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/sorbet-ai/omnimon/releases/download/v$version/SHA256SUMS",
+            "regex": "$sha256\\s+\\*?omnimon-x86_64-pc-windows-msvc\\.exe"
+        }
+    }
+}
